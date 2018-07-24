@@ -9,17 +9,18 @@ public class Point {
 	points = new Point[3];
 	
 	points[0]= new Point();
-	points[1]= new Point();
+	//points[1]= new Point();
 	points[2]= new Point();
 	
 	points[0].x=2 ;
 	points[0].y=4 ;
-	points[1].x= 3;
-	points[1].y=6 ;
+	//points[1].x= 3;
+	//points[1].y=6 ;
 	points[2].x= 4;
 	points[2].y=8 ;
 	
 	for(Point point:points) {
+		//to avoid null pointer exception
 		if(point != null) {
 			System.out.println(point.x+", "+point.y);
 		}
