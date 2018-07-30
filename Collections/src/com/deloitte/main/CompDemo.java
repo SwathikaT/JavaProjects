@@ -3,7 +3,7 @@ package com.deloitte.main;
 import java.util.Comparator;
 import java.util.TreeSet;
 
-public class Activity8 {
+public class CompDemo {
 	class MyComp implements Comparator<String> {  
 		  public int compare(String a, String b) {  
 		    String aStr, bStr;  
@@ -18,7 +18,7 @@ public class Activity8 {
 		  // No need to override equals.  
 		}  
 		  
-		class CompDemo {  
+		class comp {  
 		  public void main(String args[]) {  
 		    // Create a tree set. 
 		    TreeSet<String> ts = new TreeSet<String>(new MyComp());  
