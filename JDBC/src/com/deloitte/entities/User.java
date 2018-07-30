@@ -5,15 +5,15 @@ public class User {
 	String username;
 	String firstname;
 	String lastname;
-	String password;
+	String passwd;
 	String status;
-	public User(int id,String username,String firstname,String lastname,String password,String status) {
+	public User(int id,String username,String firstname,String lastname,String passwd,String status) {
 		
 		this.id = id;
 		this.username = username;
 		this.firstname = firstname;
 		this.lastname=lastname;
-		this.password=password;
+		this.passwd=passwd;
 		this.status=status;
 		
 	}
@@ -41,11 +41,11 @@ public class User {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	public String getPassword() {
-		return password;
+	public String getPasswd() {
+		return passwd;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
 	}
 	public String getStatus() {
 		return status;

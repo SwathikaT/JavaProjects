@@ -14,6 +14,6 @@ class User{
 	int id;
 	String fname;
 	String lname;
-	String password;
+	String passwd;
 	String status;
 }
