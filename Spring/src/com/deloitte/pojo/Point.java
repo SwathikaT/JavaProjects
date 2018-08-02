@@ -11,6 +11,7 @@ public class Point {
 
 	public void setX(int x) {
 		this.x = x;
+		System.out.println("setX");
 	}
 
 	public int getY() {
@@ -19,6 +20,11 @@ public class Point {
 
 	public void setY(int y) {
 		this.y = y;
+		System.out.println("setY");
+	}
+
+	public Point() {
+		System.out.println("Point instantiated");
 	}
 
 	@Override
