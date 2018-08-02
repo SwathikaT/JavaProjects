@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class ProcessRequestServlet
@@ -44,13 +45,17 @@ public class ProcessRequestServlet extends HttpServlet {
 		UserBean userBean = new UserBean();
 		boolean status = userBean.authenticate(username, passwd);
 		if(status) {
-			request.setAttribute("ub", userBean);
+			HttpSession session = request.getSession(true);
+			session.setMaxInactiveInterval(10);
+			//request.setAttribute("ub", userBean);
+			//life is extended as long as session stays,here 10s
+			session.setAttribute("ub", userBean);
 			request.getRequestDispatcher("/homeSDyfg8732s.jsp").forward(request, response);
 			}else {
 				request.getRequestDispatcher("loginJDHF837297.jsp?flag=true").forward(request, response);
 				}
 		/*if (username != null && passwd != null) {
-			if (username.equalsIgnoreCase("Swathi") && passwd.equals("swat123")) {
+			if (username.equalsIgnoreCase("Swathi") && passwd.equals("123")) {
 				request.getRequestDispatcher("/homeSDyfg8732s.jsp").forward(request, response);
 			} else {
 				request.getRequestDispatcher("loginJDHF837297.jsp?flag=true").forward(request, response);

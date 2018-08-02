@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ page session ="true" %>
     
       <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
       
@@ -11,8 +12,9 @@
 </head>
 <body>
 Welcome!!!!:-)
-<c:out value="${requestScope.ub.firstName } ${requestScope.ub.lastName }"></c:out></br>
+<%-- <c:out value="${requestScope.ub.firstName } ${requestScope.ub.lastName }"></c:out></br>--%>
+<c:out value="${sessionScope.ub.firstName } ${sessionScope.ub.lastName }"></c:out></br>
 <iframe width="20%" height="400" src="toc4353452.jsp"></iframe>
-<iframe width="50%" height="400"></iframe>
+<iframe width="50%" height="400" name="content"></iframe>
 </body>
 </html>

@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="transact?action=inbox">Inbox</a></br>
-<a href="transact?action=compose">Compose</a></br>
-<a href="transact?action=sent">Sent Items</a></br>
-<a href="transact?action=logout">Log Out</a></br>
+<a href="transact?action=inbox" target="content">Inbox </a></br>
+<a href="transact?action=compose"target="content">Compose</a></br>
+<a href="transact?action=sent"target="content">Sent Items</a></br>
+<a href="transact?action=logout"target="_parent">Log Out</a></br>
 
 </body>
 </html>
